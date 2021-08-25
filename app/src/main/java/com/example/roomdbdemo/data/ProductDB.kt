@@ -8,6 +8,8 @@ import androidx.room.RoomDatabase
 @Database (entities = [Product::class], version = 1, exportSchema = false)
 abstract class ProductDB : RoomDatabase() {
 
+    abstract val productDao: ProductDao
+
     companion object {
 
         @Volatile
